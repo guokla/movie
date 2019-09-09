@@ -12,8 +12,11 @@ Page({
     score:5,
     images:[],
     fileIds:[],
-    movieId:-1
+    movieId:-1,
+    commentList: {}
   },
+
+ 
 
   onContentChange:function(event){
     this.setData({

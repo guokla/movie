@@ -23,5 +23,13 @@
     </view>
     <van-button size="large" type="danger" bindtap="submit">提交评价</van-button>
   </view>
+  <view class="comment-flex">flex-direction: row</view> 
+  <view class="comment-list"wx:for="{{commentList}}" wx:key="{{index}}">
+    <view class="flex-wrp" style="flex-direction:row;">
+      <view class="comment-name">1</view>
+      <view class="comment-star">2</view>
+    </view>
+  </view>
+  <image class="comment-image">3</image>
 
 </view>
