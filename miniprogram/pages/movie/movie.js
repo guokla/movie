@@ -37,8 +37,9 @@ Page({
     //获取自定义数据movieid的集合
     //跳转到新页面的同时保留当前页面
     //ES6方式
+    console.log(event)
     wx.navigateTo({
-      url: `../comment/comment?movieid=${event.target.dataset.movieid}`,
+      url: '/pages/comment/comment?movieid=' + event.target.dataset.movieid
     })
     
   },

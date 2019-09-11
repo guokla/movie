@@ -10,6 +10,11 @@ App({
       })
     }
 
+    //不能直接通过fileid显示图片 要加入这个才行
+    wx.cloud.init({
+      traceUser: true,
+    })
+
     this.globalData = {}
   }
 })

@@ -1,0 +1,11 @@
+<!-- 评价列表 -->
+  <view class="comment-list"wx:for="{{comment}}" wx:key="{{index}}">
+  <!--<text>{{}}</text>显示评论时间-->
+    <view class="first-row">
+      <text class="showid">{{ item.nickName }}</text>
+      <view align="left"> <van-rate readonly value="{{item.score}}" /> </view>
+    </view>
+    <text>{{item.content}}</text>
+    <image src="{{item.avatarUrl}}" wx:if="{{item.avatarUrl}}"></image>
+    <image src="{{item.fileIds}}" />
+  </view>

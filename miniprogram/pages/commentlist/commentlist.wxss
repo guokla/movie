@@ -1,0 +1,17 @@
+/* pages/commentlist/commentlist.wxss */
+.first-row{
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.showid{
+  font: 18rpx;
+  text-align: left;
+  width: 300rpx;
+  overflow: hidden; /* 超出一行自动隐藏*/
+  text-overflow: ellipsis; /*文字隐藏后面加省略号*/
+  white-space: nowrap; /*强制不换行*/
+  color: red;
+}
