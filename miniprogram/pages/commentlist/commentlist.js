@@ -7,7 +7,7 @@ Page({
    */
   data: {
     comment: {},
-    movieId: "3150"
+    movieId: "-1"
   },
 
   /**
@@ -19,12 +19,11 @@ Page({
     this.setData({
       movieId: options.movieid
     })
-    console.log(this.data.movieId)
     let promiseArr = [];
     Promise.all(promiseArr).then(res => {
       // 插入数据
       db.collection('comment').where({
-        movieId: options.movieId
+        //movieid: options.movieid
       }).get().then(res => {
         console.log(res.data)
         this.setData({

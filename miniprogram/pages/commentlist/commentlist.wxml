@@ -1,11 +1,27 @@
 <!-- 评价列表 -->
-  <view class="comment-list"wx:for="{{comment}}" wx:key="{{index}}">
-  <!--<text>{{}}</text>显示评论时间-->
-    <view class="first-row">
-      <text class="showid">{{ item.nickName }}</text>
-      <view align="left"> <van-rate readonly value="{{item.score}}" /> </view>
+<view class="comment-page">
+<view class="comment-list" wx:for="{{comment}}" wx:key="{{index}}" hidden="{{!item.content}}">
+    <view class="comment-title">
+      <image class="comment-icon" src="{{item.avatarUrl}}" wx:if="{{item.avatarUrl}}"></image>
+      <view class="comment-text">
+        <text class="comment-username">{{item.nickName}}</text>
+        <view class="comment-addition"> 
+          <van-rate readonly value="{{item.score}}" /> 
+          <!--text class="comment-date"> {{此处放置评论时间}} </text-->
+          </view>
+      </view>
     </view>
-    <text>{{item.content}}</text>
-    <image src="{{item.avatarUrl}}" wx:if="{{item.avatarUrl}}"></image>
-    <image src="{{item.fileIds}}" />
+    <text class="comment-content" selectable="{{false}}">{{item.content}}</text>
+    
+    <view class="picture-group">
+      <!--view wx:for="{{item.fileIds}}" wx:key="{{pos}}">
+        <view wx:if="{{item}}">
+          <image class="picture" mode="aspectFit" src="{{item}}" />
+        </view>
+      </view-->
+      <image wx:if="{{item.fileIds[0]}}" class="picture" mode="aspectFit" src="{{item.fileIds[0]}}" />
+      <image wx:if="{{item.fileIds[1]}}" class="picture" mode="aspectFit" src="{{item.fileIds[1]}}" />
+    </view>
   </view>
+</view>
+  
