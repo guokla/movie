@@ -7,6 +7,8 @@ Page({
    */
   data: {
     comment: {},
+    re_comment: {},
+    listNum: 0,
     movieId: "-1"
   },
 
@@ -23,11 +25,13 @@ Page({
     Promise.all(promiseArr).then(res => {
       // 插入数据
       db.collection('comment').where({
-        //movieid: options.movieid
+        movieid: options.movieid
       }).get().then(res => {
         console.log(res.data)
         this.setData({
-          comment: res.data
+          comment: res.data,
+          re_comment: res.data.reverse(),
+          listNum: res.data.length
         })
       })
     })

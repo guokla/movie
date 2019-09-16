@@ -36,7 +36,7 @@
 
 .comment-content{
   font-size: 32rpx;
-  min-height: 50rpx;
+  min-height: 80rpx;
   max-height: 810rpx;
   margin-top: 20rpx;
   text-overflow: ellipsis;

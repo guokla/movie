@@ -43,6 +43,7 @@ Page({
       title: 'loading',
     })
     console.log(this.data.content, this.data.score);
+    
 
     // 上传图片到云存储
     let promiseArr = [];
@@ -64,6 +65,7 @@ Page({
           fail: console.error
         })
       }));
+      
     }
 
     Promise.all(promiseArr).then(res => {
@@ -88,8 +90,10 @@ Page({
           title: '提交失败',
         })
       })
-
-     
+      // 清空数据
+      this.setData({
+        content: ''
+      })
 
 
     });
@@ -98,7 +102,7 @@ Page({
 
   uploadImg:function(){
     wx.chooseImage({
-      count: 9,
+      count: 2,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success:res=> {
