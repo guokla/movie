@@ -26,7 +26,9 @@
 .comment-icon{
   height: 100rpx;
   width: 100rpx;
+  border-color: black;
   border-radius: 50rpx;
+  
 }
 
 .comment-addition{
@@ -37,10 +39,17 @@
 .comment-content{
   font-size: 32rpx;
   min-height: 80rpx;
-  max-height: 810rpx;
+  max-height: 800rpx;
   margin-top: 20rpx;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.comment-placeholder{
+  text-align: center;
+  color: gray;
+  margin-top: 30rpx;
+  height: 70rpx;
 }
 
 .picture-group{

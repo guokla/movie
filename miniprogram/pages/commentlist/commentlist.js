@@ -9,13 +9,17 @@ Page({
     comment: {},
     re_comment: {},
     listNum: 0,
-    movieId: "-1"
+    movieId: "-1",
+    placeholder: "--现在还没有评论QAQ--"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     console.log(options)
     // 获取id
     this.setData({
@@ -33,9 +37,11 @@ Page({
           re_comment: res.data.reverse(),
           listNum: res.data.length
         })
+        wx.hideLoading();
       })
     })
     console.log(this.data.comment)
+   
   },
 
   /**
@@ -49,7 +55,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**

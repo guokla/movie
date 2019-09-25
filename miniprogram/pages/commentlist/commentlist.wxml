@@ -1,6 +1,7 @@
 <!-- 评价列表 -->
 <view class="comment-page">
-<van-field wx:if="{{!listNum}}" placeholder="还没有评论噢" />
+<text readonly class="comment-placeholder" wx:if="{{!listNum}}" >{{placeholder}}</text>
+
 <view class="comment-list" wx:for="{{re_comment}}" wx:key="{{index}}" hidden="{{!item.content}}">
     <view class="comment-title">
       <image class="comment-icon" src="{{item.avatarUrl}}" wx:if="{{item.avatarUrl}}"></image>
