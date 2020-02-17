@@ -86,25 +86,3 @@
   height: 200rpx;
   margin: 20rpx 20rpx 0 0;
 }
-
-.button-below{
-  margin-top: 10rpx;
-  height: 100rpx;
-  width: 90%;
-  color: white;
-  background-color: red;
-  justify-content: center;
-  align-items: center;
-}
-
-.push-img{
-  height: 100rpx;
-  width: 200rpx;
-  font-size: 32rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-left: 0rpx;
-  background-color: wheat;
-}

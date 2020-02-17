@@ -12,10 +12,7 @@ Page({
     score:5,
     images:[],
     fileIds:[],
-    movieId:-1,
-    commentList: {},
-    nickName: "",
-    avatarUrl: ""
+    movieId:-1
   },
 
   onContentChange:function(event){
@@ -30,20 +27,11 @@ Page({
     });
   },
 
-  review: function(event){
-    console.log(event)
-    var that = this
-    wx.navigateTo({
-      url: '/pages/commentlist/commentlist?movieid=' + that.data.movieId
-    })
-  },
-
   submit: function () {
     wx.showLoading({
       title: 'loading',
     })
     console.log(this.data.content, this.data.score);
-    
 
     // 上传图片到云存储
     let promiseArr = [];
@@ -65,7 +53,6 @@ Page({
           fail: console.error
         })
       }));
-      
     }
 
     Promise.all(promiseArr).then(res => {
@@ -75,9 +62,7 @@ Page({
           content: this.data.content,
           score: this.data.score,
           movieid: this.data.movieId,
-          fileIds: this.data.fileIds,
-          nickName: this.data.nickName,
-          avatarUrl: this.data.avatarUrl
+          fileIds: this.data.fileIds
         }
       }).then(res => {
         wx.hideLoading();
@@ -90,11 +75,6 @@ Page({
           title: '提交失败',
         })
       })
-      // 清空数据
-      this.setData({
-        content: ''
-      })
-
 
     });
 
@@ -102,7 +82,7 @@ Page({
 
   uploadImg:function(){
     wx.chooseImage({
-      count: 2,
+      count: 9,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success:res=> {
@@ -119,7 +99,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //console.log(options)
     //获取从电影列表传来的movieid
     this.setData({
       movieId: options.movieid
@@ -144,25 +123,6 @@ Page({
     }).catch(err=>{
       return err;
     })
-    
-    var that = this;//this作用域问题 少了这句 下面this.setdata报错
-    wx.getUserInfo({
-      success: function (res) {
-        var userInfo = res.userInfo
-        var nickName = userInfo.nickName
-        var avatarUrl = userInfo.avatarUrl
-        var gender = userInfo.gender //性别 0：未知、1：男、2：女
-        //var province = userInfo.province
-        //var city = userInfo.city
-        var country = userInfo.country
-        that.setData({
-          nickName: userInfo.nickName,
-          avatarUrl: userInfo.avatarUrl
-        })
-        //console.log(userInfo)
-      }
-    })
-
   },
 
   /**

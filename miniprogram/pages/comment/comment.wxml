@@ -13,15 +13,15 @@
     </view>
   </view>
   <view class='desc'>{{detail.summary}}</view>
-  <!-- 提交评价 -->
+  <!-- 评价 -->
   <view class="comment-container">
     <van-field value="{{content}}" placeholder="写一些评价吧" bind:change="onContentChange" />
     <van-rate value="{{ score }}" bind:change="onScoreChange" />
-    <button class="push-img" bindtap="uploadImg">上传图片</button>
+    <van-button type="warning" bindtap="uploadImg">上传图片</van-button>
     <view>
       <image class="comment-img" src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image>
     </view>
-    <button class="button-below" bindtap="submit">提交评价 </button>  
-    <button class="button-below" bindtap="review">查看影评 </button>
+    <van-button size="large" type="danger" bindtap="submit">提交评价</van-button>
   </view>
+
 </view>
