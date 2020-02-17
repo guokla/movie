@@ -1,0 +1,80 @@
+[33mcommit ff56e83a7a6c49d6a9d2574219a158722ff75ca0[m[33m ([m[1;36mHEAD -> [m[1;32mnan[m[33m)[m
+Merge: b145f95 cadaaed
+Author: guokla <tydhhzc@163.com>
+Date:   Mon Feb 17 12:05:30 2020 +0800
+
+    correct readme error
+
+[33mcommit b145f95e3dd24d50ba214a1cfa006ba9200e0ed5[m
+Author: guokla <tydhhzc@163.com>
+Date:   Mon Feb 17 11:45:20 2020 +0800
+
+    rm readme.md
+    git diff
+
+[33mcommit bd802fa646497f1b952a86a3957ea3a6ad9562ee[m[33m ([m[1;31morigin/nan[m[33m)[m
+Author: guokla <tydhhzc@163.com>
+Date:   Wed Sep 25 12:15:37 2019 +0800
+
+    adjust non-comment situation's prescrition
+
+[33mcommit 34ef875e018c74ebc97f0275c641a56147fd0938[m
+Author: guokla <tydhhzc@163.com>
+Date:   Mon Sep 16 23:25:39 2019 +0800
+
+    add commnts'clear function and show placeholder without commentlist
+
+[33mcommit 0390c673e9aa6a83f6d1428735f770ae61d0bb3a[m
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 14 10:57:38 2019 +0800
+
+    Fix error of quantative images showing
+
+[33mcommit 2028c0f08a5b8b78cd08d54a18b453103506e59c[m
+Author: guokla <tydhhzc@163.com>
+Date:   Wed Sep 11 15:34:50 2019 +0800
+
+    new version 1.2
+
+[33mcommit 82d26809e31e68d2e0567f748ea40b0cf08b53ee[m
+Author: guokla <tydhhzc@163.com>
+Date:   Mon Sep 9 10:20:40 2019 +0800
+
+    add comment list
+
+[33mcommit cadaaed35227261b54a3bf3acbfef7fce4fc0066[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 18bedee 709949e
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 7 21:43:07 2019 +0800
+
+    merge
+
+[33mcommit 709949e71fa7753bb93460863a3bd951b3b3dde8[m
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 7 21:38:43 2019 +0800
+
+    add license file
+
+[33mcommit 18bedeec66f8e2b40bcb680a3a391aa5272e9747[m
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 7 21:35:53 2019 +0800
+
+    change font style
+
+[33mcommit 0a92e6a19786a4a234f6c18d5078689ece271474[m
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 7 21:15:31 2019 +0800
+
+    highlight some words
+
+[33mcommit 0b34aa42284cdb4a4af8ffc7be031afb70f070f9[m
+Author: guokla <tydhhzc@163.com>
+Date:   Sat Sep 7 21:09:02 2019 +0800
+
+    add test.txt
+
+[33mcommit cb8b4e4f8a5b14931c2052ad87ef60aad994ed61[m
+Author: unknown <unknown@example.com>
+Date:   Sat Sep 7 13:50:03 2019 +0800
+
+    Initial Commit
